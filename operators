@@ -1,0 +1,563 @@
+OPERATORS
+Q-1 : Sum and Difference
+
+Write a python program to get 2 numbers from the user and calculate their sum and difference using '+' and '-' operators respectively. Print the corresponding sum and difference of the numbers as output in the console. Input format: First input: an integer Second input: an integer Output format: First output will be the sum of two integers Second output will be the difference of two integers
+
+
+Input (stdin)
+
+55
+34
+
+Output (stdout)
+
+89
+
+21
+
+Input (stdin)
+
+45
+14
+
+Output (stdout)
+
+59
+31
+
+ 
+
+Program:
+
+a=int(input())
+
+b=int(input())
+
+print(a+b)
+
+print(a-b)
+
+Q-2 : Product and Division
+
+Write a python program to get 2 numbers from the user and calculate their product, quotient and remainder using '*', '/' and '%' operators respectively. Print the corresponding product, quotient and remainder of the numbers as output in the console. Input format: First input: an integer Second input: an integer Output format: The first output will be the product of two integers The second output will be the quotient The third output will be the remainder
+
+
+Input (stdin)
+
+50
+10
+
+Output (stdout)
+
+500
+5
+0
+
+Input (stdin)
+
+47
+23
+
+Output (stdout)
+
+1081
+2
+1
+
+ 
+
+Program:
+
+import math
+
+a=int(input())
+
+b=int(input())
+
+print(a*b)
+
+print(int(a/b))
+
+print(a%b)
+
+Q-3 : Swapping two numbers
+
+Write a python program to get 2 numbers from the user and swap their values without any loss of data. You can make use of additional 3rdvariable for swapping. Print the corresponding swapped values of the two numbers as output in the console. Input format: First input: an integer Second input: an integer Output format: The output will be integers(swapped values)
+
+
+Input (stdin)
+
+20
+10
+
+Output (stdout)
+
+10
+20
+
+Input (stdin)
+
+58
+45
+
+Output (stdout)
+
+45
+58
+
+ 
+
+Program:
+
+a=input()
+
+b=input()
+
+temp=a
+
+a=b
+
+b=temp
+
+print(a)
+
+print(b)
+
+Q-4 : Swapping without third variable
+
+Write a python program to swap two values without the use of 3rd variable. Input format: First input: an integer Second input: an integer Output format: The output will be integers(swapped values)
+
+Input (stdin)
+
+10
+20
+
+Output (stdout)
+
+20
+10
+
+Input (stdin)
+
+3
+1
+
+Output (stdout)
+
+1
+3
+
+ 
+
+Program:
+
+a=input()
+
+b=input()
+
+a,b=b,a
+
+print(a)
+
+print(b)
+
+Q-5 : Average Calculation
+
+A teacher wants to compute the average of 5 students in her class. Write a program to help her to find the average. The average is the sum of all the numbers, then divided by the total numbers. Input format: First input: 1st student mark in float Second input: 2nd student mark in float Third input: 3rd student mark in float Fourth input:4th student mark in float Fifth input: 5th student mark in float Output format: The output value should be in float with 2 decimal places.
+
+
+Input (stdin)
+
+10
+20
+30
+40
+50
+
+Output (stdout)
+
+30.00
+
+Input (stdin)
+
+12
+14
+15
+16
+12
+
+Output (stdout)
+
+13.8
+
+ 
+
+Program:
+
+a=int(input())
+
+b=int(input())
+
+c=int(input())
+
+d=int(input())
+
+e=int(input())
+
+avg=(a+b+c+d+e)/5
+
+print(avg)
+
+Q-6 : Area calculation
+
+Sheela has three things in her bag. She wants to compute the area of 3 things but 3 things are in different shapes. The three things are in square shape, rectangular shape, and circular shape respectively. Write a program to help Sheela to calculate the area of different shapes. Input format: First input: a side of a square in integer Second input: length of a rectangle in integer Third input: breadth of a rectangle in integer Fourth input: radius of a circle in float Output format: The first output should be the area of a square in integer The second output should be the area of a rectangle in integer The third output should be the area of a circle in float with 2 decimal places
+
+Input (stdin)
+
+5
+5
+4
+2.0
+
+Output (stdout)
+
+25
+20
+12.56
+
+Input (stdin)
+
+4
+2
+5
+1.0
+
+Output (stdout)
+
+16
+10
+3.14
+
+ 
+
+Program:
+
+side=int(input())
+
+length=int(input())
+
+breadth=int(input())
+
+radius=float(input())
+
+print(side**2)
+
+print(length*breadth)
+
+print("%0.2f"%(3.14*radius*radius))
+
+Q-7 : Simple Interest
+
+Sara wished to build a new house but she didn't have a sufficient amount. So, she is planning to borrow some money from the bank on simple interest. When she is borrowing some money from the bank, she has to pay back the original amount accompanied by a certain amount of interest on that amount. She wants to find the interest for borrowed money within a certain period. Help her to find the simple interest. Input format: The first line containing integer value denoting the borrowed amount(principal amount) The second line containing integer value denoting the period in years The third line containing float value denoting the rate of interest Output format: Print the simple interest with 2 decimal places.
+
+
+Input (stdin)
+
+15000
+2
+2.8
+
+Output (stdout)
+
+840.00
+
+Input (stdin)
+
+5000
+5
+4.2
+
+Output (stdout)
+
+1050.0
+
+ 
+
+Program:
+
+p=int(input())
+
+r=int(input())
+
+t=float(input())
+
+si=(p*t*r)/100
+
+print(si)
+
+Q-8 : Power of a number
+
+pow() function is used to calculate the power of any base and it is defined in math header file. Write a program to read X as the base and N as the power and calculate the result (X^N - X to the power of N). Input format: The first line containing integer denotes the base(X) The second line containing integer denotes the power(N) Output format: Print the power of a number
+
+
+Input (stdin)
+
+2
+3
+
+Output (stdout)
+
+8
+
+Input (stdin)
+
+5
+2
+
+Output (stdout)
+
+25
+
+ 
+
+Program:
+
+a=int(input())
+
+b=int(input())
+
+print(pow(a,b))
+
+Q-9 : Ternary Operator
+
+The conditional operator is also known as ternary operator can be used to make an either-or choice. Write a python program to get a number from the user and find out whether it is odd or even.
+Input format:
+
+The input containing integer denotes the given number 
+
+Output format:
+
+If given number is even, print "Even". Otherwise, print "Odd".
+
+ 
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+Odd
+
+Input (stdin)
+
+4
+
+Output (stdout)
+
+Even
+
+ 
+
+Program:
+
+a=int(input())
+
+print("Even" if a%2==0 else "Odd")
+
+Q-10 : Fencing the Ground
+
+The college ground is rectangular in shape. The Management decides to build a fence around the ground. In order to help the construction workers to build a straight fence, they planned to place a thick rope around the ground. They wanted to buy only the exact length of the rope that is needed. They also wanted to cover the entire ground with a thick carpet during rainy season. They wanted to buy only the exact quantity of carpet that is needed. They requested your help. Can you please help them by writing a program to find the exact length of the rope and the exact quantity of carper that is required? Input Format: Input consists of 2 integers. The first integer corresponds to the length of the ground and the second integer corresponds to the breadth of the ground. Output Format: Refer Sample Input and Output for exact formatting specifications.
+
+
+Input (stdin)
+
+50
+20
+
+Output (stdout)
+
+Required length is 140m
+Required quantity of carpet is 1000sqm
+
+Input (stdin)
+
+15
+4
+
+Output (stdout)
+
+Required length is 38m
+Required quantity of carpet is 60sqm
+
+ 
+
+Program:
+
+l = int(input())
+
+b = int(input())
+
+p = 2*(l+b)
+
+C = l*b
+
+print("Required length is %dm"%p)
+
+print("Required quantity of carpet is %dsqm"%C)
+
+Q-11 : Splitting into teams
+
+During the Physical Education hour, PT sir has decided to conduct some team games. He wants to split the students in the class into equal sized teams. In some cases, there may be some students who are left out from teams and he wanted to use the left out students to assist him in conducting the team games. For instance, if there are 50 students in the class and if the class has to be divided into 7 equal sized teams, 7 students will be there in each team and 1 student will be left out. PT sir asks your help to automate this team splitting task. Can you please help him out? Input Format: Input consists of 2 integers. The first integer corresponds to the number of students in the class and the second integer corresponds to the number of teams. Output Format: Refer sample input and output for formatting specifications.
+
+
+Input (stdin)
+
+60
+8
+
+Output (stdout)
+
+The number of students in each team is 7 and left out is 4
+
+Input (stdin)
+
+10
+2
+
+Output (stdout)
+
+The number of students in each team is 5 and left out is 0
+
+ 
+
+Program:
+
+a=int(input())
+
+b=int(input())
+
+c=a//b
+
+e=a%b
+
+print("The number of students in each team is {} and left out is {}".format(c,e))
+
+Q-12 : Three Idiots
+
+Ajay, Binoy and Chandru were very close friends at school. They were very good in Mathematics and they were the pet students of Emily Mam. Their gang was known as 3-idiots. Ajay, Binoy and Chandru live in the same locality. A new student Dinesh joins their class and he wanted to be friends with them. He asked Binoy about his house address. Binoy wanted to test Dinesh's mathematical skills. Binoy told Dinesh that his house is at the midpoint of the line joining Ajay's house and Chandru's house. Dinesh was puzzled. Can you help Dinesh out? Given the coordinates of the 2 end points of a line (x1,y1) and (x2,y2), write a python program to find the midpoint of the line. Input Format: Input consists of 4 integers. The first integer corresponds to x1 . The second integer corresponds to y1. The third and fouth integers correspond to x2 and y2 respectively. Output Format: Refer Sample Input and Output for exact formatting specifications. [All floating point values are displayed correct to 1 decimal place]
+
+Input (stdin)
+
+[All text in bold corresponds to input and the rest corresponds to output]
+
+ 
+
+2
+4
+10
+15
+
+Output (stdout)
+
+Binoy's house is located at (6.0,9.5)
+
+Input (stdin)
+
+5
+5
+5
+5
+
+Output (stdout)
+
+Binoy's house is located at (5.0,5.0)
+
+ 
+
+Program:
+
+X1=int(input())
+
+Y1=int(input())
+
+X2=int(input())
+
+Y2=int(input())
+
+a=((X1+X2)/2.0)
+
+b=((Y1+Y2)/2.0)
+
+print("Binoy's house is located at ({},{})".format(a,b))
+
+Q-13 : Profit Calculation
+
+Each Sunday, a newspaper agency sells x copies of a certain newspaper for Rs.a per copy. The cost to the agency of each newspaper is Rs.b . The agency pays a fixed cost for storage, delivery and so on of Rs.100 per Sunday. The newspaper agency wants to calculate the profit obtained on sundays. Can you please help them out by writing a python program to compute the profit given x, a and b. Input Format: Input consists of 3 integers --- x, a and b. X is the number of copies sold, a is the cost per copy and b is the cost the agency spends per copy. Output Format: Refer Sample Input and Output for exact formatting specifications. 
+
+Input (stdin)
+
+1000
+2
+1
+
+Output (stdout)
+
+The profit obtained is Rs. 900
+
+Input (stdin)
+
+200
+5
+4
+
+Output (stdout)
+
+The profit obtained is Rs. 100
+
+ 
+
+Program:
+
+x=int(input())
+
+a=int(input())
+
+b=int(input())
+
+p=((x*a)-(x*b))-100
+
+print("The profit obtained is Rs. %d"%p)
+
+Q-14 : Alice in wonderland
+
+Alice was bored that day,so she was sitting on the riverbank .Suddenly she notices a talking, White Rabbit with a pocket watch .It ran fast,and she followed it, down a rabbit hole .She fell into the hole and found a magical wonderland with dark trees, beautiful flowers.She found many ways numbered from 1,2,3,........18.she was confused which is the right way that will lead her to her home. She found a cute bird, standing in one of the tree. Alice asked the bird the way to go back to her home.The bird said a two digit number( say 23 ) and asked her to find the sum of its digits (2+3=5) and that numbered way will lead her to her home.Alice was already confused, so pls help Alice in finding the route to her home.... Input Format: Input consists of an integer corresponding to the 2-digit number. Output Format: Output consists of an integer corresponding to the sum of its digits. Refer sample input and output for formatting specifications. [All text in bold corresponds to input and the rest corresponds to output]
+Input (stdin)
+
+23
+
+Output (stdout)
+
+Alice must go in path-5
+
+Input (stdin)
+
+10
+
+Output (stdout)
+
+Alice must go in path-1
+
+ 
+
+Program:
+
+a=int(input())
+
+b=a/10
+
+c=a%10
+
+e=int(b+c)
+
+print("Alice must go in path-%d"%e)
