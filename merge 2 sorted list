@@ -21,7 +21,7 @@ class List:
                 head1=head1.next
             else:
                 head3=ob.insert(head3,head2.data)
-                head2=head2.next
+                head2=head2.next                #githib.com/Anand-29 
         if(head1!=None):
             while(head1!=None):
                 head3=ob.insert(head3,head1.data)
@@ -35,6 +35,17 @@ class List:
         while(head!=None):
             print(head.data)
             head=head.next
+    def nthnode(self,h,n):
+        c=0
+        temp=h
+        while(temp!=None):
+            temp=temp.next
+            c+=1
+        c=c-n
+        while(c>0):
+            h=h.next
+            c-=1
+        print("nth node from last",h.data)
 ob=List()
 head1=None;head2=None;head3=None
 list1=[0,1,2,3,10]
@@ -45,3 +56,5 @@ for i in list2:
     head2=ob.insert(head2,i)
 #ob.display(head1)
 ob.merge(head1,head2,head3)
+n=2
+ob.nthnode(head1,n)
