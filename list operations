@@ -38,11 +38,33 @@ class List:
         while(temp!=None):
             print(temp.data)
             temp=temp.next
+    def deletefront(self):
+        temp=self.head
+        self.head=temp.next
+        self.head.prev=None
+        temp=None
+    def deletelast(self):
+        temp1=self.head
+        while(temp1.next.next!=None):
+            temp1=temp1.next
+        temp2=temp1.next
+        temp1.next=None
+        temp2=None
+    def deletepos(self,pos):
+        t1=self.head
+        while(pos>2):
+            t1=t1.next
+            pos-=1
+        t2=t1.next
+        t1.nex=t2.next
+        t3=t2.next
+        t3.prev=t1
+        t2=None
 ob=List()
 ob.insertend(10)
-ob.insertend(20)
+ob.insertend(20)                    #github.com/Anand-29  (list operations)
 ob.insertfront(30)
-ob.insertpos(40,2)
+ob.insertpos(40,2)              
 ob.display()
         
         
