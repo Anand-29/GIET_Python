@@ -1,0 +1,53 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+        self.prev=None
+class List:
+    def __init__(self):
+        self.head=None
+    def insertend(self,data):
+        newnode=Node(data)
+        if(self.head==None):
+            self.head=newnode
+        else:
+            temp=self.head
+            while(temp.next!=None):
+                temp=temp.next
+            temp.next=newnode
+            newnode.prev=temp
+    def insertfront(self,data):
+        newnode=Node(data)
+        temp=self.head
+        self.head=newnode
+        newnode.next=temp
+        temp.prev=newnode
+    def insertpos(self,data,pos):
+        newnode=Node(data)
+        t1=self.head
+        while(pos>2):
+            t1=t1.next
+            pos-=1
+        t2=t1.next
+        t1.next=newnode
+        newnode.next=t2
+        t2.prev=newnode
+        newnode.prev=t1
+    def display(self):
+        temp=self.head
+        while(temp!=None):
+            print(temp.data)
+            temp=temp.next
+ob=List()
+ob.insertend(10)
+ob.insertend(20)
+ob.insertfront(30)
+ob.insertpos(40,2)
+ob.display()
+        
+        
+        
+        
+        
+        
+        
