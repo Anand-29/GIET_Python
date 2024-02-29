@@ -1,0 +1,99 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+class Tree:
+    def getnode(self,data):
+        newnode=Node(data)
+        return newnode
+    def insert(self,root,data):
+        if(root==None):
+            newnode=ob.getnode(data)
+            return newnode
+        elif(data<root.data):
+            root.left=ob.insert(root.left,data)
+        elif(data>root.data):
+            root.right=ob.insert(root.right,data)
+        return root
+    def display(self,root):
+        if(root==None):
+            return 
+        ob.display(root.left)
+        print(root.data)
+        ob.display(root.right)
+    def height(self,root):
+        if(root==None):
+            return 0
+        else:
+            if(ob.height(root.left)>ob.height(root.right)):
+                return 1+ob.height(root.left)
+            else:
+                return 1+ob.height(root.right)
+    def level(self,root):
+        if(root==None):
+            return
+        h=ob.height(root)
+        for i in range(1,h+1):
+            print(" "*(h-i),end="")
+            ob.printlevel(root,i)
+            print()
+    def printlevel(self,root,level):
+        if(root==None):
+            return
+        elif(level==1):
+            print(root.data,end=" ")
+        else:
+            ob.printlevel(root.left,level-1)
+            ob.printlevel(root.right,level-1)
+    def binary(self,root,min,max):
+        if(root==None):
+            return True
+        if(root.data>max and root.data<min):
+            return False
+        else:
+            return ob.binary(root.left,min,root.data) and ob.binary(root.right,root.data,max)
+    def equal(self,root1,root2):
+        if(root1==None and root2==None):
+            return True
+        elif(root1==None or root2==None):
+            return False
+        else:
+            return (root1.data==root2.data) and ob.equal(root1.left,root2.right) and ob.equal(root1.right,root2.left)
+    def leaf(self,root,data):
+        if(data==root.data):
+            t1=root.right
+            t2=t1.left
+            while(t2.left!=None):
+                t1=t1.left
+                t2=t1.left
+            root.data=t2.data
+            t1.left=None
+            t2=None
+        else:
+            return ob.leaf(root.left,data) and ob.leaf(root.right,data)
+            
+ob=Tree()
+root=None
+for i in range(1,5):
+    root=ob.insert(root,i)
+#root.right=ob.getnode(-1)
+ob.display(root)
+print(ob.height(root))
+ob.level(root)
+if(ob.binary(root,-100,100)):
+    print("Yes")
+else:
+    print("No")
+root1=ob.getnode(4)
+root1.right=ob.getnode(6)
+root1.right.left=ob.getnode(5)
+root1.right.right=ob.getnode(7)
+ob.display(root1)
+root1.left=ob.getnode(3)
+root1.left.left=ob.getnode(1)
+root1.left.right=ob.getnode(2)
+ob.level(root1)
+ob.equal(root,root1)
+ob.leaf(root1,5)
+ob.level(root1)
