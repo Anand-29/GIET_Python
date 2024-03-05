@@ -1,0 +1,29 @@
+def precedence(d):
+    if(d=='+'):
+        return 1
+    elif(d=='*'):
+        return 2
+    else:
+        return -1                               #github.com/Anand-29
+n=input();list=[];stack=[]
+for i in n:
+    if(i<='9' and i>='0'):
+        list.append(i)
+    else:
+        if(len(stack)-1!=-1 and precedence(i)<=precedence(stack[len(stack)-1])):
+            list.append(stack.pop())
+        stack.append(i)
+while len(stack)!=0:
+    list.append(stack.pop())
+print(list)
+for i in list:
+    if(i<='9' and i>='0'):
+        stack.append(i)
+    else:
+        v1=int(stack.pop())
+        v2=int(stack.pop())
+        if(i=='+'):
+            stack.append(v1+v2)
+        elif(i=='*'):
+            stack.append(v1*v2)
+print(stack[len(stack)-1])
