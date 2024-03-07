@@ -1,0 +1,28 @@
+def solution(box,oldColor,newColor,x,y):
+    if(x<0 or x>4 or y<0 or y>4):
+        return
+    if(box[x][y]!=oldColor):
+        return
+    if(box[x][y]==newColor):
+        return 
+    box[x][y]=newColor
+    solution(box,newColor,oldColor,x+1,y)
+    solution(box,newColor,oldColor,x-1,y)           #github.com/Anand-29
+    solution(box,newColor,oldColor,x,y+1)
+    solution(box,newColor,oldColor,x,y-1)
+box=[[0,0,1,0,0],
+     [0,0,1,0,0],
+     [1,1,1,1,1],
+     [0,0,1,0,0],
+     [0,0,1,0,0]]
+newcolor,oldcolor,x,y=5,1,0,2
+for i in range(0,5):
+    for j in range(0,5):
+        print(box[i][j],end=' ')
+    print()
+print()
+solution(box,1,5,0,0)
+for i in range(0,5):
+    for j in range(0,5):
+        print(box[i][j],end=' ')
+    print()
