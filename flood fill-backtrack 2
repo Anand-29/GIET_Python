@@ -1,0 +1,26 @@
+#floof fill:-
+def solution(box,oldcolor,newcolor,x,y):
+    if(x>4 or x<0 or y<0 or y>4):
+        return
+    if(box[x][y]!=oldcolor):
+        return 
+    if(box[x][y]==newcolor):
+        return
+    box[x][y]=newcolor
+    solution(box,oldcolor,newcolor,x+1,y)
+    solution(box,oldcolor,newcolor,x-1,y)
+    solution(box,oldcolor,newcolor,x,y+1)
+    solution(box,oldcolor,newcolor,x,y-1)
+
+box=[[1,1,2,1,1],[1,2,2,2,1],[1,2,2,1,1],[1,2,3,3,3],[1,2,2,3,3]]
+oldcolor,newcolor,x,y=2,5,0,2
+for i in range(0,5):
+    for j in range(0,5):
+        print(box[i][j],end=' ')
+    print()
+    print()
+solution(box,oldcolor,newcolor,x,y)
+for i in range(0,5):
+    for j in range(0,5):
+        print(box[i][j],end=' ')
+    print()
