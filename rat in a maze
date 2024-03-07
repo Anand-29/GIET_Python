@@ -1,0 +1,30 @@
+def safe(box,x,y):
+    if( x>=0 and x<=5 and y>=0 and y<=5 and box[x][y]==1):
+        return True
+    return False
+def solution(box,sol,x,y):
+    if(x==5 and y==5 and box[x][y]==1):
+        sol[x][y]=1
+        return True                     #github.com/Anand-29
+    if(safe(box,x,y)==True):
+        sol[x][y]=1
+        if(solution(box,sol,x+1,y)==True):
+            return True
+        if(solution(box,sol,x,y+1)==True):
+            return True
+        sol[x][y]=0
+        return False
+    return False
+box=[[1,1,1,0,1,0],
+     [0,0,1,1,1,0],
+     [1,0,0,1,1,0],
+     [1,0,1,0,1,1],
+     [0,1,1,1,0,1],
+     [0,1,0,1,1,1]]
+sol=[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],
+[0,0,0,0,0,0]]
+solution(box,sol,0,0)
+for i in range(0,6):
+    for j in range(0,6):
+        print(sol[i][j],end=' ')
+    print()
