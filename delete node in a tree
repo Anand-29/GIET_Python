@@ -8,25 +8,25 @@ class Tree:
         if(root==None):
             newnode=Node(data)
             return newnode
-        elif(root.data>data):
+        elif(data<root.data):
             root.left=ob.insert(root.left,data)
-        elif(root.data<data):
+        elif(data>root.data):
             root.right=ob.insert(root.right,data)
         return root
     def inorder(self,root):
         if(root==None):
-            return 
+            return
         ob.inorder(root.left)
-        print(root.data)
+        print(root.data,end='->')
         ob.inorder(root.right)
     def delete(self,root,data):
         if(root==None):
             return
-        if(root.data>data):
+        if(data<root.data):
             root.left=ob.delete(root.left,data)
-            return root                         #github.com/Anand-29
-        if(root.data<data):
-            root.right=ob.delete(root.right,data)
+            return root
+        if(data>root.data):
+            ob.right=ob.delete(root.right,data)
             return root
         if(root.left==None):
             temp=root.right
@@ -42,13 +42,25 @@ class Tree:
             while(t2.left!=None):
                 t1=t2
                 t2=t2.left
-            if(t1==root):
-                t1.right=t2.left
             root.data=t2.data
+            if(t1==root):
+                t1.right=t2.right
+            else:
+                t1.right=t2.left
             t2=None
             return root
 ob=Tree()
 root=None
-root=ob.insert(root,10)
-ob.insert(root,5)
-ob.insert(root,15);ob.inorder(root);ob.delete(root,10);ob.inorder(root)
+while(True):
+    n=int(input("press 1 to insert\n2 to delete\n3 to display"))
+    if(n==1):
+        data=int(input("enter the data"))
+        root=ob.insert(root,data)
+    elif(n==3):
+        ob.display(root)
+    elif(n==2):
+        data=int(input("enter the data to be deleted"))
+        ib.delete(root,data)
+    else:
+        break
+    
