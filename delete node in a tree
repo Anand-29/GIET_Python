@@ -24,7 +24,7 @@ class Tree:
             return
         if(root.data>data):
             root.left=ob.delete(root.left,data)
-            return root
+            return root                         #github.com/Anand-29
         if(root.data<data):
             root.right=ob.delete(root.right,data)
             return root
@@ -36,6 +36,17 @@ class Tree:
             temp=root.left
             root=None
             return temp
+        if(root.data==data):
+            t1=root
+            t2=t1.right
+            while(t2.left!=None):
+                t1=t2
+                t2=t2.left
+            if(t1==root):
+                t1.right=t2.left
+            root.data=t2.data
+            t2=None
+            return root
 ob=Tree()
 root=None
 root=ob.insert(root,10)
