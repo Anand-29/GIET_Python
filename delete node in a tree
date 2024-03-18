@@ -1,0 +1,43 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+class Tree:
+    def insert(self,root,data):
+        if(root==None):
+            newnode=Node(data)
+            return newnode
+        elif(root.data>data):
+            root.left=ob.insert(root.left,data)
+        elif(root.data<data):
+            root.right=ob.insert(root.right,data)
+        return root
+    def inorder(self,root):
+        if(root==None):
+            return 
+        ob.inorder(root.left)
+        print(root.data)
+        ob.inorder(root.right)
+    def delete(self,root,data):
+        if(root==None):
+            return
+        if(root.data>data):
+            root.left=ob.delete(root.left,data)
+            return root
+        if(root.data<data):
+            root.right=ob.delete(root.right,data)
+            return root
+        if(root.left==None):
+            temp=root.right
+            root=None
+            return temp
+        if(root.right==None):
+            temp=root.left
+            root=None
+            return temp
+ob=Tree()
+root=None
+root=ob.insert(root,10)
+ob.insert(root,5)
+ob.insert(root,15);ob.inorder(root);ob.delete(root,10);ob.inorder(root)
