@@ -55,7 +55,7 @@ while(True):
     n=int(input("press 1 to insert\n2 to delete\n3 to display"))
     if(n==1):
         data=int(input("enter the data"))
-        root=ob.insert(root,data)
+        root=ob.insert(root,data)           #github.com/Anand-29
     elif(n==3):
         ob.display(root)
     elif(n==2):
