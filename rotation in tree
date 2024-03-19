@@ -1,0 +1,58 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+class Tree:
+    def insert(self,root,data):
+        if(root==None):
+            newnode=Node(data)
+            return newnode
+        elif(data<root.data):
+            root.left=ob.insert(root.left,data)
+        elif(data>root.data):
+            root.right=ob.insert(root.right,data)
+        return root
+    def preorder(self,root):
+        if(root==None):
+            return
+        print(root.data,end="->")
+        ob.preorder(root.left)
+        ob.preorder(root.right)
+    def rightrotate(self,root):
+        t1=root.left
+        t2=t1.right
+        root.left=t2
+        t1.right=root
+        return t1
+    def leftrotate(self,root):
+        t1=root.right
+        t2=t1.left
+        root.right=t2
+        t1.left=root
+        return t1
+    def verify(self,root):
+        if(root==None):
+            return True
+        if(root.right!=None):
+            return False
+        else:
+            return ob.verify(root.left)
+    def height(self,root):
+        if(root==None):
+            return 0
+        else:
+            if(ob.height(root.left)>ob.height(root.right)):
+                return 1+ob.height(root.left)
+            else:
+                1+ob.height(root.right) #
+ob=Tree()
+root=None
+root=ob.insert(root,5);ob.insert(root,3);ob.insert(root,4);ob.preorder(root)
+print("\nheight before",ob.height(root))
+if(ob.verify(root)==True):
+    root=ob.rightrotate(root)
+else:
+    root.left=ob.leftrotate(root.left)
+    root=ob.rightrotate(root)
+print();ob.preorder(root);print("after rotate",ob.height(root))    
