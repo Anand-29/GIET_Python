@@ -1,0 +1,104 @@
+Q-1: Maximum Value
+
+Write a python program to find maximum value using function concept
+
+Input (stdin)
+
+5
+2
+
+Output (stdout)
+
+5
+
+Input (stdin)
+
+5
+6
+3
+2
+
+Output (stdout)
+
+6
+
+Program:
+
+a =int(input());
+
+b =int(input());
+
+ 
+
+def find_Biggest():
+
+  if(a >= b):
+
+    largest=a
+
+  else:
+
+    largest=b
+
+  print('',largest)
+
+find_Biggest();
+
+Q-2: Func_Square root
+
+Find the square of a number using a function declaration using the return statement.
+
+Input (stdin)
+
+5
+Output (stdout)
+
+The square number is:25
+
+Input (stdin)
+
+4
+Output (stdout)
+
+The square number is:16
+
+Program:
+
+def sq(n):
+
+  print("The square number is:{}".format(n**2))
+
+num=int(input())
+
+sq(num)
+
+Q-3: Func_cube root
+
+To find the cube of a number using a function declaration using the return statement.
+
+Input (stdin)
+
+5
+
+ 
+
+Output (stdout)
+
+The cube number is:125
+
+Input (stdin)
+
+10
+Output (stdout)
+
+The cube number is:1000
+
+Program:
+
+def cube(n):
+
+  print("The cube number is:{}".format(n**3))
+
+num=int(input())
+
+cube(num)
