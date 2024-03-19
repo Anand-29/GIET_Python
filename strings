@@ -1,0 +1,1013 @@
+Q-1 : Replace all Occurrences of ‘a’ with $ in a String
+
+ESome people are playing cricket match. One is wound, so he was taken to hospital. And there is no person to play the match. So one person is to replace instead of him. Help them to replace the person to win the match.(replace all occurrences of ‘a’ with ‘$’ in a string.) Problem Description The program takes a string and replaces all occurrences of ‘a’ with ‘$’. Problem Solution 1. Take a string and store it in a variable. 2. Using the replace function, replace all occurrences of ‘a’ and ‘A’ with ‘$’ and store it back in the variable. 3. Print the modified string. 4. Exit.
+
+
+Input (stdin)
+
+Apple
+
+Output (stdout)
+
+$pple
+
+ 
+
+Program:
+
+str=input()
+
+str=str.replace('A','$')
+
+print(str)
+
+Q-2 : Remove the nth Index Character from a Non-Empty String
+
+There is an interview process going on in a company. In that recruitment 200 people came for an interview. For HR it is very difficult to take an interview for those 200 peoples. So help the HR to disqualify the person who is sufficient for the proper work( remove the nth index character from a non-empty string..) Problem Description The program takes a string and removes the nth index character from the non-empty string. Program Explanation 1. User must enter a string and store it in a variable. 2. User must also enter the index of the character to remove. 3. The string and the index of the character to remove are passed as arguments to the remove function. 4. In the function, the string is split into two halves before the index character and after the index character. 5. The first half and the last half is then merged together using the ‘+’ operator. 6. The modified string is printed.
+
+
+Input (stdin)
+
+Hello
+3
+
+Output (stdout)
+
+Helo
+
+Input (stdin)
+
+welcome
+2
+
+Output (stdout)
+
+wecome
+
+ 
+
+Program:
+
+def remove(string, n): 
+
+      first = string[:n]  
+
+      last = string[n+1:] 
+
+      return first + last
+
+string=input()
+
+n=int(input())
+
+print(remove(string, n))
+
+Q-3 : String and Replace Every Blank Space with Hyphen
+
+There is a people standing in a row. We have to insert flower in each and every gap between two persons. Help the person to fill the gap between them. Write a Python Program to take a string and replace every blank space with a hyphen. Problem Description The program takes a string and replaces every blank space with a hyphen. Problem Solution 1. Take a string and store it in a variable. 2. Using the replace function, replace all occurrences of ‘ ‘ with ‘-‘ and store it back in the variable. 3. Print the modified string. 4. Exit.
+
+
+Input (stdin)
+
+hello world
+
+Output (stdout)
+
+hello-world
+
+Input (stdin)
+
+c programming
+
+Output (stdout)
+
+c-programming
+
+ 
+
+Program:
+
+str=input()
+
+str=str.replace(' ','-')
+
+print(str)
+
+Q-4 : Remove the Characters of Odd Index Values in a String
+
+Students in a class going to write an exam. In a bench there are 5 members were sitting. Staff wants the students to sit three in bench. So he/she told that odd number people who is sitting in the bench should move out and sit in another bench. Help the staff to find out the odd people out. Problem Description The program takes a string and removes the characters of odd index values in the string. Problem Solution 1. Take a string from the user and store it in a variable. 2. Pass the string as an argument to a function. 3. In the function, initialize a variable to an empty character. 4. Use a for loop to traverse through the string. 5. Use an if statement to check if the index of the string is odd or even. 6. If the index is odd, append the no character to the string. 7. Then print the modified string. 8. Exit.
+
+
+Input (stdin)
+
+hello
+
+Output (stdout)
+
+hlo
+
+Input (stdin)
+
+welcome
+
+Output (stdout)
+
+wloe
+
+ 
+
+Program:
+
+def modify(str):
+
+  final = ""
+
+  for i in range(len(str)):
+
+    if (i % 2) == 0:
+
+      final = final + str[i]
+
+  return final
+
+str = input()
+
+print(modify(str))
+
+Q-5 : Take in Two Strings and Display the Larger String without Using Built-in Functions
+
+Write a Python Program to take in two strings and display the larger string without using built-in functions. Problem Description The program takes in two strings and display the larger string without using built-in function. Problem Solution 1. Take in two strings from the user and store it in separate variables. 2. Initialize the two count variables to zero. 3. Use a for loop to traverse through the characters in the string and increment the count variables each time a character is encountered. 4. Compare the count variables of both the strings. 5. Print the larger string. 6. Exit.
+
+
+Input (stdin)
+
+Delhi
+Bangalore
+
+Output (stdout)
+
+Bangalore
+
+ 
+
+Program:
+
+str,str1 = input(),input()
+
+c1,c2 = 0,0
+
+for i in str:
+
+  c1 = c1+1
+
+for j in str1:
+
+  c2 = c2+1
+
+if(c1<c2):
+
+  print(str1)
+
+else:
+
+  print(str)
+
+Q-6 : Calculate the case in the String
+
+There are 50 students in the class. The teacher wants to arrange them in the height order. So help the teacher to find the smallest person and tallest to arrange.(count the number of lowercase letters and uppercase letters in a string.) Problem Description The program takes a string and counts the number of lowercase letters and uppercase letters in the string. Problem Solution 1. Take a string from the user and store it in a variable. 2. Initialize the two count variables to 0. 3. Use a for loop to traverse through the characters in the string and increment the first count variable each time a lowercase character is encountered and increment the second count variable each time a uppercase character is encountered. 4. Print the total count of both the variables. 5. Exit.
+
+
+Input (stdin)
+
+HeLLo
+
+Output (stdout)
+
+2
+3
+
+ 
+
+Program:
+
+str = input()
+
+c1,c2 = 0,0
+
+for i in str:
+
+  if i.islower():
+
+    c1 = c1+1
+
+  else:
+
+    c2 = c2+1
+
+print(c1)
+
+print(c2)
+
+Q-7 : Check if a String is a Pangram or Not
+
+Write a Python Program to check if a string is a pangram or not. Problem Description The program takes a string and checks if it is a pangram or not. Problem Solution 1. Take a string from the user and store it in a variable. 2. Pass the string as an argument to a function. 3. In the function, form two sets- one of all lower case letters and one of the letters in the string. 4. Subtract these both sets and check if it is equal to an empty set. 5. Print the final result. 6. Exit.
+
+
+Input (stdin)
+
+The quick brown fox jumps over the lazy dog.
+
+Output (stdout)
+
+pangram
+
+ 
+
+Program:
+
+from string import ascii_lowercase as asc_lower
+
+def check(s):
+
+    return set(asc_lower) - set(s.lower()) == set([])
+
+strng=input()
+
+if(check(strng)==True):
+
+      print("pangram")
+
+else:
+
+      print("Not pangram")
+
+Q-8 : Calculate the Number of Digits and Letters in a String
+
+Write a Python Program to calculate the number of digits and letters in a string. Problem Description The program takes a string and calculates the number of digits and letters in a string. Problem Solution 1. Take a string from the user and store it in a variable. 2. Initialize the two count variables to 0. 3. Use a for loop to traverse through the characters in the string and increment the first count variable each time a digit is encountered and increment the second count variable each time a character is encountered. 4. Print the total count of both the variables. 5. Exit.
+
+
+Input (stdin)
+
+Hello123
+
+Output (stdout)
+
+3
+8
+
+ 
+
+Program:
+
+s = input()
+
+d=l=0
+
+for c in s:
+
+    if c.isdigit():
+
+        d=d+1
+
+    elif c.isalpha():
+
+        l=l+1
+
+    else:
+
+        pass
+
+print(d)
+
+print(l+d)
+
+Q-9 : form a new string made of the first 2 characters and last 2 characters from a given string
+
+write a Python Program to form a new string made of the first 2 characters and last 2 characters from a given string. Problem Description The program takes a string and forms a new string made of the first 2 characters and last 2 characters from a given string. Problem Solution 1. Take a string from the user and store it in a variable. 2. Initialize a count variable to 0. 3. Use a for loop to traverse through the characters in the string and increment the count variable each time. 4. Form the new string using string slicing. 5. Print the newly formed string. 6. Exit.
+
+
+Input (stdin)
+
+Hello World
+
+Output (stdout)
+
+Held
+
+ 
+
+Program:
+
+str=input()
+
+c=0
+
+for i in str:
+
+      c=c+1
+
+new=str[0:2]+str[c-2:c]
+
+print(new)
+
+Q-10 : Characters in Ascending order
+
+Write a python code to arrange the characters in ascending order of the given String
+
+
+Input (stdin)
+
+Top Speed
+Output (stdout)
+
+ deeoppst
+
+Input (stdin)
+
+God of War
+
+Output (stdout)
+
+  adfgoorw
+
+ 
+
+Program:
+
+str = input()
+
+str2 = ''.join(sorted(str.lower()))
+
+print(str2)
+
+Q-11 : Count number of words
+
+Write a Python program to count number of words in the given sentence.
+
+
+Input (stdin)
+
+Wildlife traditionally refers to undomesticated animal species, but has come to include all organisms that grow or live wild in an area without being introduced by humans
+
+Output (stdout)
+
+The number of words in string are : 27
+
+ 
+
+Program:
+
+s=input()
+
+s=s.split()
+
+print("The number of words in string are :",len(s))
+
+Q-12 : Add substring at specific index
+
+Write a Python program to add substring at specific index in the given string
+
+
+Input (stdin)
+
+Bond Bond
+ James
+4
+
+ 
+
+Output (stdout)
+
+Bond James Bond
+
+Input (stdin)
+
+Winner Winner Dinner
+ Chicken
+13
+
+Output (stdout)
+
+Winner Winner Chicken Dinner
+
+ 
+
+Program:
+
+s1=input()
+
+s2=input()
+
+indx=int(input())
+
+a=s1[:indx]+s2+s1[indx:]
+
+print(a)
+
+Q-13 : Replace string1 with string 2
+
+Write a Python code to replace the string1 with string 2.
+Explanation:
+
+Get two strings. Check whether first character of string2 is present in the string1. If yes, replace the remaining characters in string1 with string2
+
+else concatenate both string.
+
+ 
+
+Input (stdin)
+
+My prince
+precious
+
+Output (stdout)
+
+My precious
+
+Input (stdin)
+
+Lord Voldemort
+ Tyrion
+
+Output (stdout)
+
+Lord Tyrion
+
+ 
+
+Program:
+
+s1=input()
+
+s2=input()
+
+indx=s1.find(s2[:1])
+
+print(s1[:indx]+s2)
+
+Q-14 : Highest occurrence of character
+
+Write a Python code to find the highest occurrence of character in the given string. The string is in lower case.
+Input (stdin)
+
+iron man
+
+Output (stdout)
+
+n 2
+
+Input (stdin)
+
+avengers endgame
+
+Output (stdout)
+
+e 4
+
+ 
+
+Program:
+
+from collections import OrderedDict
+
+string = input()
+
+N= {}
+
+for character in string:
+
+    if character in N:
+
+        N[character] += 1
+
+    else:
+
+        if character ==' ':
+
+            pass
+
+        else:
+
+            N[character] = 1
+
+D=OrderedDict(sorted(N.items()))
+
+M= max(D, key=D.get)
+
+print(M, D[M] )
+
+Q-15 : String Encryption
+
+Write a Java code to encrypt the given string using a key.
+
+
+Input (stdin)
+
+Game of Thrones
+6
+
+Output (stdout)
+
+Mgsk ul Znxutky
+
+Input (stdin)
+
+Jhon Wick
+53
+
+Output (stdout)
+
+Kipo Xjdl
+
+ 
+
+Program:
+
+str = input()
+
+key = int(input())
+
+temp = ""
+
+for i in range(0,len(str)):
+
+    if str[i]>='A' and str[i]<='Z':
+
+        offset = ord(str[i])-65
+
+        offset = (offset+key) % 26
+
+        ch = chr(offset+ord('A'))
+
+        temp +=ch
+
+    elif str[i]>='a' and str[i]<='z':
+
+        offset = ord(str[i])-97
+
+        offset = (offset+key) % 26
+
+        ch = chr(offset+ord('a'))
+
+        temp +=ch
+
+    else:
+
+         temp+=" "
+
+print(temp)
+
+Q-16 : Run length encoding
+
+Write a Python code that prints the run length encoding of the input string
+
+
+Input (stdin)
+
+ggggooooottttttt
+
+Output (stdout)
+
+g4o5t7
+
+Input (stdin)
+
+sssttTTaaar
+
+Output (stdout)
+
+s3t2T2a3r1
+
+ 
+
+Program:
+
+s1 =input()
+
+n = len(s1)
+
+i = 0
+
+while i < n:
+
+  count = 1
+
+  while (i<n-1 and s1[i]== s1[i + 1]):
+
+    count += 1
+
+    i += 1
+
+  i += 1
+
+  print(s1[i-1]+str(count),end="")
+
+Q-17 : Frequency of character
+
+Write a Python program to find the frequency of character in the given string.
+
+
+Input (stdin)
+
+execute
+
+Output (stdout)
+
+c 1
+e 3
+t 1
+u 1
+x 1
+
+Input (stdin)
+
+Compilation
+
+Output (stdout)
+
+a 1
+c 1
+i 2
+l 1
+m 1
+n 1
+o 2
+p 1
+t 1
+
+ 
+
+Program:
+
+s1=input()
+
+a=list(s1)
+
+s2=set(s1)
+
+s3=sorted(s2)
+
+for letters in s3:
+
+  print(letters,a.count(letters))
+
+Q-18 : Frequency of words
+
+Write a Python program to find the frequency of words in the given string.
+
+
+Input (stdin)
+
+Hatred was spreading everywhere blood was being spilled everywhere wars were breaking out everywhere
+
+Output (stdout)
+
+Hatred : 1
+was : 2
+spreading : 1
+everywhere : 3
+blood : 1
+being : 1
+spilled : 1
+wars : 1
+were : 1
+breaking : 1
+out : 1
+
+Input (stdin)
+
+No heart is so hard as the timid heart
+
+Output (stdout)
+
+No : 1
+heart : 2
+is : 1
+so : 1
+hard : 1
+as : 1
+the : 1
+timid : 1
+
+  
+
+Program:
+
+s1=input()
+
+s1=s1.split()
+
+s2=[]
+
+for i in s1:            
+
+  if i not in s2:
+
+    s2.append(i)        
+
+for i in range(len(s2)):
+
+  print(s2[i], ':',s1.count(s2[i]))
+
+Q-19 : Binary String
+
+Write a Python program to check whether the given string is binary string or not.
+
+
+Input (stdin)
+
+1101010111
+
+Output (stdout)
+
+Binary String
+
+Input (stdin)
+
+1261010
+
+Output (stdout)
+
+Not a Binary String
+
+ 
+
+Program:
+
+def check(string) :
+
+    p = set(string)
+
+    s = {'0', '1'}
+
+    if s == p or p == {'0'} or p == {'1'}:
+
+        print("Binary String")
+
+    else :
+
+        print("Not a Binary String")
+
+if __name__ == "__main__" :
+
+    string = input()
+
+    check(string)
+
+Q-20 : accept strings which contains all vowels
+
+Write a Python program to accept strings which contains all vowels.
+
+
+Input (stdin)
+
+Racecar
+
+Output (stdout)
+
+Not Accepted
+
+Input (stdin)
+
+EDUCATION
+
+Output (stdout)
+
+Accepted
+
+ 
+
+ 
+
+Program:
+
+s1=input()
+
+s1=s1.lower()
+
+l1=['a','e','i','o','u']
+
+st=set()
+
+for a in s1:
+
+  if a in l1:
+
+    st.add(a)
+
+  else:
+
+    pass
+
+if len(st)==len(l1):
+
+  print("Accepted")
+
+else:
+
+  print("Not Accepted")
+
+Q-21 : Missing alphabets in String
+
+Write a Python code to find the missing alphabets in the given string.
+
+
+Input (stdin)
+
+The quick brown fox jumps over the dog
+
+Output (stdout)
+
+a,l,y,z,
+
+Input (stdin)
+
+World
+
+Output (stdout)
+
+a,b,c,e,f,g,h,i,j,k,m,n,p,q,s,t,u,v,x,y,z,
+
+ 
+
+Program:
+
+MAX_CHAR = 26
+
+def missingChars(Str) :
+
+    present = [False for i in range(MAX_CHAR)]
+
+    for i in range(len(Str)):
+
+        if (Str[i] >= 'a' and Str[i] <= 'z'):
+
+            present[ord(Str[i]) - ord('a')] = True
+
+        elif (Str[i] >= 'A' and Str[i] <= 'Z'):
+
+            present[ord(Str[i]) - ord('A')] = True
+
+    res = ""
+
+    for i in range(MAX_CHAR):
+
+        if (present[i] == False):
+
+            res += chr(i + ord('a'))
+
+    return res
+
+Str = input("")
+
+d =missingChars(Str)
+
+print(','. join(d), end=',' )
+
+Q-22 : Palindrome
+
+Write a Python program to check whether the given string is Palindrome or not.
+
+
+Input (stdin)
+
+racecar
+
+
+Output (stdout)
+
+Panlindrome
+
+Input (stdin)
+
+tutor
+
+Output (stdout)
+
+Not Palindrome
+
+ 
+
+Program:
+
+def isPalindrome(s):
+
+    return s == s[::-1]
+
+ 
+
+ 
+
+# Driver code
+
+s = input()
+
+ans = isPalindrome(s)
+
+ 
+
+if ans:
+
+    print("Panlindrome")
+
+else:
+
+    print("Not Palindrome")
+
+Q-23 : Reverse words
+
+Write a Python program to reverse the words in the given string.
+
+
+Input (stdin)
+
+valar morghulis
+
+Output (stdout)
+
+morghulis valar
+
+Input (stdin)
+
+Show me the money
+
+Output (stdout)
+
+money the me Show
+
+ 
+
+Program:
+
+def rev_sentence(sentence):
+
+ 
+
+    # first split the string into words
+
+    words = sentence.split(' ')
+
+ 
+
+    # then reverse the split string list and join using space
+
+    reverse_sentence = ' '.join(reversed(words))
+
+ 
+
+    # finally return the joined string
+
+    return reverse_sentence 
+
+if __name__ == "__main__":
+
+    a=input()
+
+    print (rev_sentence(a))
+
+Q-24 : Substring is Present in a Given String
+
+Write a Python program to find whether the substring is Present in a Given String
+
+
+Input (stdin)
+
+With great power comes great responsibility
+power
+
+Output (stdout)
+
+YES
+
+Input (stdin)
+
+santa is coming
+are
+
+Output (stdout)
+
+NO
+
+ 
+
+Program:
+
+def check(string, sub_str):
+
+    if (string.find(sub_str) == -1):
+
+        print("NO")
+
+    else:
+
+        print("YES")
+
+           
+
+# driver code
+
+string = input()
+
+sub_str =input()
+
+check(string, sub_str) 
