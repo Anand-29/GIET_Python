@@ -1,0 +1,759 @@
+DECISION MAKING STATEMENTS
+Q-1 : compare two strings
+
+Get two integers x and y from the user and write a python program to relate 2 integers as equal to, less than or greater than. Input format: Input consist of 2 integers The first input corresponds to the first number(x) The second input corresponds to the second number(y) Output format: If the first number is equal to the second number, print "x and y are equal". Otherwise, print "x greater than y" or "x less than y"
+
+
+Input (stdin)
+
+17
+12
+
+Output (stdout)
+
+17 greater than 12
+
+Input (stdin)
+
+3
+4
+
+Output (stdout)
+
+3 less than 4
+
+ 
+
+Program:
+
+x=int(input())
+
+y=int(input())
+
+if(x==y):
+
+               print("{} and {} are equal".format(x,y))
+
+elif x>y:
+
+               print("{} greater than {}".format(x,y))
+
+else:
+
+               print("{} less than {}".format(x,y))
+
+Q-2 : Checking Alphabets
+
+Write a python program to check whether the given character is vowel or consonant. Input format: The input consist of a character Output format: The output consists of a below-given string “Vowel” / “Consonant” / “Not an alphabet”
+
+
+Input (stdin)
+
+a
+
+Output (stdout)
+
+Vowel
+
+Input (stdin)
+
+l
+
+Output (stdout)
+
+Consonant
+
+ 
+
+Program:
+
+l=input()
+
+if l.lower() in ('a','e','i','o','u'):
+
+  print("Vowel")
+
+elif l.upper() in ('A','E','I','O','U'):
+
+  print("Vowel")
+
+elif l.lower() in ('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z'):
+
+  print("Consonant")
+
+elif l.upper in ('B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','V','W','X','Y','Z'):
+
+   print("Consonant")
+
+else:
+
+               print("Not an alphabet")
+
+Q-3 : Profit or Loss
+
+A fruit seller buys a dozen of banana at Rs.X. He sells 1 banana at Rs.Y. Write a python program to determine the profit or loss in Rs. for the fruitseller. Input format: Input consists of 2 floating point numbers The first input corresponds to the total cost(X) The second input corresponds to the sold cost(Y) Output format: Print "Profit or Loss" with Rupees. Sample Input: 60.0 4 Sample Output: Loss : Rs.12.00
+
+
+Input (stdin)
+
+60.0
+4
+
+Output (stdout)
+
+Loss : Rs. 12.00
+
+Input (stdin)
+
+40.3
+2
+
+Output (stdout)
+
+Loss : Rs. 16.30
+
+ 
+
+Program:
+
+x=float(input())
+
+y=float(input())
+
+y=y*12
+
+if(x<y):
+
+    print("profit : Rs. {0:.2f}".format(y-x))
+
+#elif(x==y):
+
+#             print("Neither profit nor loss")
+
+else:
+
+               print("Loss : Rs. {0:.2f}".format(x-y))
+
+Q-4 : Fee Collection
+
+Write a python program to determine the fee amount to be collected from a student.
+Refer the table below for fee details.
+
+
+ Input format:
+
+The first input corresponds to the student type
+
+The second input corresponds to the tuition fee
+
+The third input corresponds to the bus fee
+
+The fourth input corresponds to the hostel fees
+
+Output format:
+
+Print the total fee amount of the corresponding student.
+
+Refer below sample output for formatting
+
+Input (stdin)
+
+MSH
+40000
+12000
+50000
+
+Output (stdout)
+
+90000
+
+Input (stdin)
+
+MGSDS
+50000
+12000
+10000
+
+Output (stdout)
+
+87000
+
+ 
+
+Program:
+
+t=input()
+
+f=int(input())
+
+b=int(input())
+
+h=int(input())
+
+if (t=='MSDS'):
+
+               print(f+b)
+
+elif(t=='MSH'):
+
+   print(f+h)
+
+elif(t=='MGSDS'):  
+
+               print(((f/100)*150)+b)
+
+else:
+
+               print(((f/100)*150)+h)
+
+Q-5 : Age Detector
+
+Ask a user for their birth year encoded as two digits (like "62") and for the current year, also encoded as two digits (like "99"). Write a python program to find the users current age in years.
+Input format:
+
+Input consists of 2 integers
+
+The first integer corresponds to the last 2 digits of the birth year
+
+The second integer corresponds to the last 2 digits of the current year
+
+Output format:
+
+Print the user's current age
+
+Refer below sample output for formatting.
+
+Input (stdin)
+
+62
+00
+
+
+Output (stdout)
+
+38
+
+Input (stdin)
+
+36
+45
+
+
+Output (stdout)
+
+9
+
+ 
+
+Program:
+
+a=int(input())
+
+b=int(input())
+
+if(a>b):
+
+               print((100-a)+b)
+
+else:
+
+               print(b-a)
+
+Q-6 : Mango Tree I
+
+Dora is interested so much in gardening and she plants more trees in her garden. She plants trees in a rectangular fashion with the order of rows and columns and numbered the trees in row-wise order. She planted the mango tree only in a 1st row, 1st column and last column. So given the tree number, your task is to find whether the given tree is a mango tree or not? Write a program to check whether the given number is a mango tree or not. Input format: Input consists of 3 integers The first input denotes the number of rows The second input denotes the number of columns The third input denotes the tree number Output format: If the given number is a mango tree, print "Yes". Otherwise, print "No" Refer the sample output for formatting
+
+
+Input (stdin)
+
+5
+5
+11
+
+Output (stdout)
+
+Yes
+
+Input (stdin)
+
+2
+2
+4
+
+Output (stdout)
+
+Yes
+
+
+
+Program:
+
+row=int(input()) 
+
+col=int(input())
+
+tree=int(input())
+
+if(tree>=1 and tree<=row or tree%col==0 or tree%col==1):
+
+               print("Yes")
+
+else:
+
+               print("No")
+
+Q-7 : Hotel Tariff Calculator
+
+Write a python program to calculate the hotel tariff. The room rent is 20% high during peak seasons [April-June, November-December]. Input format: The first input containing an integer which denotes the number of the month The second input containing the floating point number which denotes the room rent per day The third input containing an integer which denotes the number of days stayed in the hotel Output format: Print the hotel tariff to be paid in floating point with 2 decimal places Refer the sample output for formatting
+
+
+Input (stdin)
+
+3
+1500
+2
+
+Output (stdout)
+
+3000.00
+
+Input (stdin)
+
+1
+1500
+3
+
+Output (stdout)
+
+4500.00
+
+ 
+
+Program:
+
+a=int(input())
+
+b=float(input())
+
+c=int(input())
+
+if a in(4,5,6,11,12):
+
+               e=((b/100)*20)+b
+
+               print("{:.2f}".format(e*c))
+
+else:
+
+               print("{:.2f}".format(b*c))
+
+Q-8 : Budget
+
+t’s your job to calculate the cost of replacing damaged battle droids and to check whether it is within the budget limit of Rs. 15000. The cost of the equipment and parts is given below. Blast Rifle Rs. 350.34 Visual Sensors Rs. 230.90 Auditory Sensors Rs. 190.55 Arms Rs. 125.30 Legs Rs. 180.90 Write a python program to solve this problem. Input format: Input consists of 5 integers The first input denotes the number of blast rifles needed The second input denotes the number of visual sensors needed The third input denotes the number of auditory sensors needed The fourth input denotes the number of arms needed The fifth input denotes the number of legs needed Output format: If the total cost of replacing damaged battle droids is within the sanctioned budget of Rs. 15000, print "Yes". Otherwise, print "No" Refer the sample output for formatting
+
+
+Input (stdin)
+
+20
+10
+14
+3
+9
+
+Output (stdout)
+
+Yes
+
+Input (stdin)
+
+20
+4
+12
+15
+2
+
+Output (stdout)
+
+Yes
+
+ 
+
+Program:
+
+a=int(input())
+
+b=int(input())
+
+c=int(input())
+
+e=int(input())
+
+f=int(input())
+
+g=float((350.34*a)+(230.90*b)+(190.55*c)+(125.30*e)+(180.90*f))
+
+if(g <= 15000):
+
+               print("Yes")
+
+else:
+
+               print("No")
+
+Q-9 : Sece Dining
+
+The catering staff in the SECE mess are known for their good cooking skills as well as hospitality. We all know that the dining table arrangement needs to be different for left handed and right handed persons. So whenever any VIP guests come to SECE, they would make the table arrangements based on whether they are left handed or right handed. The mess is situated on the 15th floor of the hostel building. SECE hostel building has superfast elevators to help to travel from one floor to another. Each elevator has 2 doors, the front one and the rear one. If a person enters the elevator through the front door, he goes out through the rear door and vice-versa. The elevator has 2 rails numbered as 1 and 2. Rail 1 is located to the left of the entrance to the front door (or correspondingly, to the right of the entrance to the rear door). Rail 2 is located opposite it, to the right of the entrance to the front door and to the left of the entrance to the rear door. We know that each person holds on the rail with his/her strongest hand. There is an IP camera in the elevator and based on the camera output, the catering staff will be easily able to identify whether a guest is left handed or right handed. They have decided to automate this task and they asked the help of Image Processing Group. The Image Processing Group has written a program to perform this task and the program will output the door through which the person entered and the rail number which the person held. Based on this input, write a program to determine whether a person is left handed or right handed?
+
+
+Input format:
+
+The first input containing a string denotes “front” or “rear”
+
+The second input containing an integer denotes rail 1 or 2
+
+Output format:
+
+Print the string "Left Handed" or "Right Handed"
+
+Input (stdin)
+
+front
+1
+
+Output (stdout)
+
+Left Handed
+
+Input (stdin)
+
+rear
+2
+
+Output (stdout)
+
+Left Handed
+
+ 
+
+Program:
+
+a=input()
+
+b=int(input())
+
+if(a=="front" and b==1):
+
+               print("Left Handed")
+
+elif(a=="front" and b==2):
+
+               print("Right Handed")
+
+elif(a=="rear" and b==1):
+
+               print("Right Handed")
+
+else:
+
+               print("Left Handed")
+
+Q-11 : Circle Intersection
+
+Write a python program to determines if two circles intersect each other. Input format: Input consists of 6 integers The first input containing an integer which denotes the x-coordinate of the center of the first circle. The second input containing an integer which denotes the y-coordinate of the center of the first circle. The third input containing an integer which denotes the radius of the first circle. The next 3 integers denote the x,y, and radius of the second circle. Output format: The output consists of a single line which contains any of these 3 strings. “Tangential”, “Overlap”, “Do not overlap”
+
+
+Input (stdin)
+
+10
+10
+3
+10
+6
+1
+
+Output (stdout)
+
+Tangential
+
+Input (stdin)
+
+2
+3
+5
+6
+4
+5
+
+Output (stdout)
+
+overlap
+
+ 
+
+Program:
+
+import math
+
+x1 = int(input())
+
+y1 = int(input())
+
+r1 = int(input())
+
+x2 = int(input())
+
+y2 = int(input())
+
+r2 = int(input())
+
+d1 = math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+
+d=int(d1)
+
+radSumSq = (r1 + r2)
+
+if (radSumSq == d):
+
+  print("Tangential")
+
+elif (radSumSq > d):
+
+  print("overlap")
+
+else:
+
+  print("Do not overlap")
+
+Q-12 : Time sheet
+
+Jeevitha just started work as a programming trainer for UIT's Placement Cell. She is paid Rs.100 an hour, with a few exceptions. She earns an extra Rs.15 an hour for any part of a day where she works more than 8 hours, and an extra Rs.25 an hour for hours beyond 40 in any one week. Also, she earns a 25% bonus for working on Saturday and a 50% bonus for working on Sunday. The bonuses for Saturday and Sunday are computed based on the hours worked those days; they are not used to calculate any bonus for working more than 40 hours in a week. You'll be given the number of hours Jeevitha worked on each day in a week (Sunday, Monday, ..., Saturday), and you need to compute her salary for the week. Input format: Input consists of 7 integers less than or equal to 24 on separate lines Output format: Print the Jeevith's salary for a week.
+
+
+Input (stdin)
+
+0
+8
+8
+8
+10
+6
+0
+
+Output (stdout)
+
+4030
+
+Input (stdin)
+
+3
+3
+6
+9
+8
+7
+4
+1
+
+Output (stdout)
+
+4265
+
+ 
+
+Program:
+
+n1=int(input())
+
+n2=int(input())
+
+n3=int(input())
+
+n4=int(input())
+
+n5=int(input())
+
+n6=int(input())
+
+n7=int(input())
+
+r1=n1*150
+
+r7=n7*125
+
+if(n2<=8):
+
+    r2=n2*100
+
+else:
+
+    b=n2-8
+
+    brate=b*115
+
+    r2=brate+800  
+
+if(n3<=8):
+
+    r3=n3*100
+
+else:
+
+    b=n3-8
+
+    brate=b*115
+
+    r3=brate+800
+
+if(n4<=8):
+
+    r4=n4*100
+
+else:
+
+    b=n4-8
+
+    brate=b*115
+
+    r4=brate+800
+
+if(n5<=8):
+
+    r5=n5*100
+
+else:
+
+    b=n5-8
+
+    brate=b*115
+
+    r5=brate+800
+
+if(n6<=8):
+
+    r6=n6*100
+
+else:
+
+    b=n6-8
+
+    brate=b*1
+
+if(n6<=8):
+
+    r6=n6*100
+
+else:
+
+    b=n6-8
+
+    brate=b*115
+
+    r6=brate+800
+
+total=n2+n3+n4+n5+n6
+
+if(total>40):
+
+    edays=total-40
+
+    r8=edays*25
+
+totalrate=r1+r2+r3+r4+r5+r6+r7
+
+print(totalrate)   
+
+Q-13 : Microwave Oven
+
+A microwave oven manufacturer recommends that when heating two items, add 50% to the heating time, and when heating three items double the heating time. Heating more than three items at once is not recommended. Write a python program to find out the recommended heating time. Input format: The first input containing an integer which denotes the number of items The second input containing the floating point number which denotes the single item heating time. Output format: Print the recommended heating time in floating point with 2 decimal places. If the number of items is more than three, print "Number of items is more" Refer the sample output for formatting
+
+
+Input (stdin)
+
+2
+5.0
+
+Output (stdout)
+
+7.50
+
+Input (stdin)
+
+3
+6.5
+
+Output (stdout)
+
+13.00
+
+ 
+
+Program:
+
+a = int(input())
+
+b = float(input())
+
+if(a==2):
+
+               print(((b/100)*50)+b)
+
+elif(a==3):
+
+               print(b*2)
+
+else:
+
+               print("Number of items is more")
+
+Q-14 : Movie Tickets
+
+Ask the customer's age and for the time on a 24-hour clock (where noon is 12.00 and 4:30 PM is 16.30). The show timings are 10.15, 13.30, 18.00 and 22.00. The normal adult ticket price is $8.00, however, the adult matinee price is $5.00. Adults are those over 13 years. The normal children's ticket price is $4.00, however, the children's matinee price is $2.00. Write a python program that determines the price of a movie ticket Input format: The first input containing an integer which denotes the age The second input containing the floating point number which denotes the show timing. Output format: Print the price of a movie ticket. Refer the sample output for formatting
+
+
+Input (stdin)
+
+16
+10.5
+
+Output (stdout)
+
+$8.00
+
+ 
+
+ 
+
+Input (stdin)
+
+24
+12.3
+
+ 
+
+Output (stdout)
+
+$8.00
+
+ 
+
+Program:
+
+a = int(input())   #age
+
+b = float(input()) #show timing
+
+if(b >  10.15 and b < 13.30 or a>13):
+
+               print("$8.00")
+
+elif(b > 18.00 and b<22.00 or a>13):
+
+               print("$5.00")
+
+elif(b >  10.15 and b < 13.30 or a<13):
+
+               print("$4.00")
+
+elif(b > 18.00 and b<22.00 or a<13):
+
+               print("$2.00")
