@@ -1,0 +1,636 @@
+Q-1 : Series I
+
+Write a program to generate the following series --- 1,4,9,16,25, .... Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting
+
+
+Input (stdin)
+
+7
+
+Output (stdout)
+
+1 4 9 16 25 36 49
+
+ 
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+1 4 9 16 25
+
+ 
+
+Program:
+
+n=int(input())
+
+for i in range(1,n+1):
+
+                   res=i*i
+
+                   print(res,end=" ")
+
+Q-2 : Series II
+
+Write a program to generate the following series --- 6,11,21,36,56,... Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting.
+
+
+Input (stdin)
+
+6
+
+Output (stdout)
+
+6
+11
+21
+36
+56
+81
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+6
+11
+21
+36
+56
+
+ 
+
+Program:
+
+n=int(input())
+
+a=6
+
+for i in range(1,n+1):
+
+                   print(a)
+
+                   res=5*i
+
+                   a=a+res
+
+Q-3 : Series III
+
+Write a program to generate the first n terms in the series --- 3, 9, 27, 81,...,... Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting 
+
+Input (stdin)
+
+6
+
+Output (stdout)
+
+3 9 27 81 243 729
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+3 9 27 81 243
+
+ 
+
+Program:
+
+n=int(input())
+
+a=3
+
+b=3
+
+for i in range(1,n+1):
+
+                   print(a,end=" ")
+
+                   a=b*a
+
+Q-4 : Series IV
+
+Write a program to generate the following series --- 0.5,1.5,4.5,13.5,... Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting.
+
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+0.5 1.5 4.5 13.5 40.5
+
+Input (stdin)
+
+3
+
+Output (stdout)
+
+0.5 1.5 4.5
+
+ 
+
+Program:
+
+n=int(input())
+
+a=0.5
+
+b=3
+
+for i in range(1,n+1):
+
+                   print(a,end=" ")
+
+                   a=b*a
+
+Q-5 : Series V
+
+Write a program to generate the following series --- 121,225,361,... Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting.
+
+
+Input (stdin)
+
+4
+
+Output (stdout)
+
+121 225 361 529
+
+Input (stdin)
+
+6
+
+Output (stdout)
+
+121 225 361 529 729 961
+
+ 
+
+Program:
+
+n=int(input())
+
+a=11
+
+b=4
+
+for i in range(1,n+1):
+
+                   mul=a**2
+
+                   print(mul,end=" ")
+
+                   a=a+b
+
+Q-6 : Series VI
+
+Write a program to generate the following series --- 0,2,8,14,...,34 Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting.
+
+
+Input (stdin)
+
+6
+
+Output (stdout)
+
+0 2 8 14 24 34
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+0 2 8 14 24
+
+ 
+
+Program:
+
+n=int(input())
+
+a=0
+
+for i in range(1,n+1):
+
+                   if(i%2!=0):
+
+                                      print((i*i-1),end=" ")
+
+                   else:
+
+                                      print((i*i-2),end=" ")
+
+Q-7 :Series VII
+
+Write a program to generate the following series --- 1, 2.0, 3.0, 6.0, 9.0, 18.0, 27.0,... Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting
+
+
+Input (stdin)
+
+6
+
+Output (stdout)
+
+1 2.0 3.0 6.0 9.0 18.0
+
+Input (stdin)
+
+2
+
+Output (stdout)
+
+1 2.0
+
+ 
+
+Program:
+
+n = int(input())
+
+a = 1
+
+b = 2.0
+
+print(a,b,end=" ")
+
+for i in range(3,n+1):
+
+  if i%2==1:
+
+    a=a*3
+
+    print(float(a),end=" ")
+
+  else:
+
+    b=b*3
+
+    print(float(b),end=" ")
+
+Q-8 : Series VIII
+
+Write a program to generate the following series 4, 5, 9, 18, 34,... Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting.
+
+
+Input (stdin)
+
+6
+
+Output (stdout)
+
+4
+5
+9
+18
+34
+59
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+4
+5
+9
+18
+34
+
+ 
+
+Program:
+
+import math
+
+n = int(input())
+
+a,b=4,5
+
+sum = 0
+
+print(a)
+
+print(b)
+
+sum = a+b
+
+for i in range(3,n+1):
+
+  print(sum)
+
+  sum=sum+pow(i,2)
+
+Q-9 : Series IX
+
+Write a program to generate the following series 2, 3, 8, 63, 3968 Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting
+
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+2
+3
+8
+63
+3968
+
+Input (stdin)
+
+7
+
+Output (stdout)
+
+2
+3
+8
+63
+3968
+15745023
+247905749270528
+
+Input (stdin)
+
+3
+
+Output (stdout)
+
+2
+3
+8
+
+ 
+
+Program:
+
+n=int(input())
+
+a=2
+
+for i in range(1,n+1):
+
+                   print(a)
+
+                   a=(a**2)-1
+
+Q-10 : Series XI
+
+In a cricket game, the run rate starts with a value of 95.0. For each over there is an increase in the run rate. Based on the increase rate a series is generated. Write a program to generate the following series 95.0, 115.5, 138.0,..., 189.0
+
+Input Format:
+
+The input is an integer that denotes 'n'.
+
+Output Format:
+
+Print the series and refer to the sample output for formatting.
+
+Sample Input 1:
+
+5
+
+Sample Output 1:
+
+95 115.5 138 162.5 189
+
+Explanation:
+
+Here the input is 5 and hence 5 terms are printed.
+
+Sample Input 2:
+
+3
+
+Sample Output 2:
+
+95 115.5 138
+
+Explanation:
+
+Here the input is 3 and hence 3 terms are printed.
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+95.0 115.5 138.0 162.5 189.0
+
+Input (stdin)
+
+3
+
+Output (stdout)
+
+95.0 115.5 138.0
+
+Input (stdin)
+
+10
+
+
+Output (stdout)
+
+95.0 115.5 138.0 162.5 189.0 217.5 248.0 280.5 315.0 351.5
+
+ 
+
+Program:
+
+n = int(input())
+
+x = 95.0
+
+ctr = 1
+
+i = 20.5
+
+while ctr<=n:
+
+    print(x,end=" ")
+
+    x=x+i
+
+    i=i+2
+
+    ctr+=1
+
+Q-11 : Series XI
+
+Write a program to generate the following series 9, 11, 20, 31,..., 82 Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting.
+
+
+Input (stdin)
+
+6
+
+Output (stdout)
+
+9 11 20 31 51 82
+
+Input (stdin)
+
+10
+
+Output (stdout)
+
+9 11 20 31 51 82 133 215 348 563
+
+ 
+
+Program:
+
+n = int(input())
+
+a = 9
+
+b = 11
+
+print(a,b,end=" ")
+
+for i in range(3,n+1):
+
+  sum=a+b
+
+  a=b
+
+  b=sum
+
+  print(sum,end=" ")
+
+Q-12 : Series XII
+
+Write a program to generate the following series 5, 16, 49, 104, 181... Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting.
+
+
+Input (stdin)
+
+5
+Output (stdout)
+
+5
+16
+49
+104
+181
+
+Input (stdin)
+
+10
+
+Output (stdout)
+
+5
+16
+49
+104
+181
+280
+401
+544
+709
+896
+
+ 
+
+Program:
+
+n = int(input())
+
+for i in range(1,n+1):
+
+  t = (11*i*i)-(22*i)+16
+
+  print(t)
+
+Q-13 : Series XIII
+
+Write a program to generate the following series 2, 5, 11, 23, 47, 95, 191........... Input format: The input containing an integer which denotes 'n' Output format: Print the series and refer the sample output for formatting
+
+
+Input (stdin)
+
+6
+
+Output (stdout)
+
+2 5 11 23 47 95
+
+Input (stdin)
+
+10
+
+Output (stdout)
+
+2 5 11 23 47 95 191 383 767 1535
+
+ 
+
+Program:
+
+n = int(input())
+
+x = 2
+
+print(x,end=" ")
+
+for i in range(2,n+1):
+
+  x=x*2+1
+
+  print(x,end=" ")
+
+Q-14 : Series XIV
+
+Write a program to generate the following series 3, 8, 13, 24, 41, 70, 117, 194,....... Input format: The input containing an integer which denotes 'n' Output format: Print the series. Refer the sample output for formatting
+Input (stdin)
+
+6
+
+Output (stdout)
+
+3 8 13 24 41 70
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+3 8 13 24 41
+
+ 
+
+Program:
+
+n = int(input())
+
+x,y=3,8
+
+sum = 0
+
+print(x,y,end=" ")
+
+for i in range(3,n+1):
+
+  sum=x+y+(i-1)
+
+  x=y
+
+  y=sum
+
+  print(sum,end=" ")
