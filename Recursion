@@ -1,0 +1,184 @@
+Q-1: Binary equivalent of a number using recursion
+
+Write a python program takes a number and finds the binary equivalent of a number recursively.
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+1 0 1
+
+Input (stdin)
+
+7
+Output (stdout)
+
+1 1 1
+
+Program:
+
+def binary(n):
+
+   if n > 1:
+
+       binary(n//2)
+
+   print(n % 2,end = ' ')
+
+dec = int(input())
+
+binary(dec)
+
+Q-2: Fibonacci series using recursion
+
+Write a Python Program to find the fibonacci series using recursion.
+
+Input (stdin)
+
+5
+Output (stdout)
+
+0
+1
+1
+2
+3
+
+Input (stdin)
+
+6
+Output (stdout)
+
+0
+1
+1
+2
+3
+5
+
+ 
+
+Program:
+
+def recur_fibo(n): 
+
+   if n <= 1: 
+
+       return n 
+
+   else: 
+
+       return(recur_fibo(n-1) + recur_fibo(n-2)) 
+
+nterms = int(input("")) 
+
+if nterms <= 0: 
+
+   print("Plese enter a positive integer") 
+
+else: 
+
+   for i in range(nterms): 
+
+       print(recur_fibo(i)) 
+
+Q-3: Flatten a Nested List using Recursion
+
+Write a python program to Flatten a Nested List using Recursion.
+
+Input (stdin)
+
+
+Output (stdout)
+
+Flattened list is: [1, 2, 3, 4]
+
+Program:
+
+def flatten(S):
+
+    if S == []:
+
+        return S
+
+    if isinstance(S[0], list):
+
+        return flatten(S[0]) + flatten(S[1:])
+
+    return S[:1] + flatten(S[1:])
+
+s=[[1,2],[3,4]]
+
+print("Flattened list is:",flatten(s))
+
+Q-4: Sum of digits using recusrion
+
+Write a python program takes a number and finds the sum of the digits of the number recursively.
+
+Input (stdin)
+
+135
+
+Output (stdout)
+
+9
+
+Input (stdin)
+
+5678
+Output (stdout)
+
+26
+
+Program:
+
+def sum_of_digit( n ):
+
+    if n == 0:
+
+        return 0
+
+    return (n % 10 + sum_of_digit(int(n / 10)))
+
+num=int(input(""))
+
+result = sum_of_digit(num)
+
+print(result)
+
+Q-5: Reverse a string using recursion
+
+Write a Python Program to reverse a string using recursion.
+
+Input (stdin)
+
+hello world
+
+Output (stdout)
+
+dlrow olleh
+
+Input (stdin)
+
+Hello programmer
+Output (stdout)
+
+remmargorp olleH
+
+Program:
+
+def reverse(string):
+
+    if len(string) == 0:
+
+        return string
+
+    else:
+
+        return reverse(string[1:]) + string[0]
+
+a = str(input(""))
+
+print(reverse(a))
