@@ -66,6 +66,7 @@ while(True):
         print(ob.delete(data),"is deleted")
     elif(n==3):
         print("Elements in table are:- ")
+        ob.display()
     elif(n==4):
         data=int(input("Enter the data"))
         print(ob.search(data),"is present")
